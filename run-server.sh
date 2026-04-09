@@ -1,0 +1,11 @@
+./llama.cpp/build/bin/llama-server \
+  -hf unsloth/Qwen3-Coder-Next-GGUF:Qwen3-Coder-Next-UD-Q4_K_XL \
+  -ngl 16 \
+  -c 131072 \
+  --cache-type-k tq_uniform_4b \
+  -np 1 \
+  -cb \
+  --flash-attn on \
+  --jinja \
+  --reasoning-budget 1024 --no-kv-offload \
+  --port 8080

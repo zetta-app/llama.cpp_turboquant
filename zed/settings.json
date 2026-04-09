@@ -1,0 +1,51 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "default_model": {
+      "provider": "Local AI",
+      "model": "unsloth/Qwen3-Coder-Next-GGUF",
+      "enable_thinking": false,
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "language_models": {
+    "openai_compatible": {
+      "Local AI": {
+        "api_url": "http://127.0.0.1:8080",
+        "available_models": [
+          {
+            "name": "unsloth/Qwen3-Coder-Next-GGUF",
+            "max_tokens": 65536,
+            "max_output_tokens": 8192,
+            "max_completion_tokens": 65536,
+            "extra_body": {
+              "reasoning_effort": "medium",
+            },
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true,
+              "chat_completions": true,
+            },
+          },
+        ],
+      },
+    },
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark",
+  },
+}
